@@ -90,10 +90,6 @@ const Reward = () => {
       setRewards(rewardsData);
   
     } catch (err) {
-      const res = await fetch("/auth/profile");
-      const d = await res.json();
-      console.log(d)
-      console.log(d.user)
       console.error("Error fetching user or rewards:", err);
     }
   };
