@@ -22,7 +22,7 @@ class DevConfig(Config):
 
 
 class ProdConfig(Config):
-    SQLALCHEMY_DATABASE_URI = os.getenv("DATABASE_URI", "postgres://postgres.barvojfxyqwhwgjptvcs:BxOCIyIEykEAmulU@aws-0-us-east-1.pooler.supabase.com:6543/postgres?sslmode=require&supa=base-pooler.x")
+    SQLALCHEMY_DATABASE_URI = os.getenv("DATABASE_URI", "sqlite:///prod2.db")
     DEBUG = os.getenv("DEBUG", False)
     SQLALCHEMY_ECHO = os.getenv("ECHO", False)
     SQLALCHEMY_TRACK_MODIFICATIONS = os.getenv("SQLALCHEMY_TRACK_MODIFICATIONS", False)
