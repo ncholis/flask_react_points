@@ -53,6 +53,7 @@ class RewardsResource(Resource):
         try:
             user = User.query.filter_by(id=user_id).first()
         except Exception as e:
+            print("ERROR: %s" % e)
             return []
 
         return user.rewards

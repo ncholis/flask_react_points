@@ -71,6 +71,7 @@ class SignUp(Resource):
             email=data.get("email"),
             password=generate_password_hash(data.get("password")),
         )
+
         for r in rewards:
             reward = Reward(**r)
             new_user.rewards.append(reward)
