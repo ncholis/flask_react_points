@@ -24,12 +24,12 @@ const RewardCard = ({ id, name, point, date_earned, is_claim, desc, onPoint, id_
 
             {/* Claim Button */}
             <Button
-              variant={claimed | !is_claim ? "secondary" : "primary"}
+              variant={claimed ? "secondary" : "primary"}
               block
               onClick={onhandlePoint}
-              disabled={claimed | !is_claim} // Disable button if already claimed
+              disabled={claimed} // Disable button if already claimed
             >
-              { claimed | !is_claim ? 'Claimed' : 'Claim' }
+              { claimed ? 'Claimed' : 'Claim' }
             </Button>
           </Card.Body>
         </Card>
