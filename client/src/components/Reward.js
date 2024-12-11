@@ -87,9 +87,16 @@ const Reward = () => {
 
       const rewardRes = await fetch(`/reward/rewards/${d.user.id}`);
       const rewardsData = await rewardRes.json();
+      console.log("REWARDS DATA:")
+      console.log(rewardsData)
       setRewards(rewardsData);
   
     } catch (err) {
+      const rewardRes = await fetch(`/reward/rewards/1`);
+      const rewardsData = await rewardRes.json();
+      console.log("REWARDS DATA:")
+      console.log(rewardsData)
+      setRewards(rewardsData);
       console.error("Error fetching user or rewards:", err);
     }
   };
