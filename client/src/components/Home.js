@@ -30,6 +30,10 @@ const HomePage = () => {
 
   useEffect(() => {
     const s = localStorage.getItem("services");
+    if (!s) {
+      localStorage.setItem("services", JSON.stringify(services));
+    }
+
     if (s) {
       setServices(JSON.parse(s));
     }
