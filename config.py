@@ -26,9 +26,3 @@ class ProdConfig(Config):
     DEBUG = os.getenv("DEBUG", False)
     SQLALCHEMY_ECHO = os.getenv("ECHO", False)
     SQLALCHEMY_TRACK_MODIFICATIONS = os.getenv("SQLALCHEMY_TRACK_MODIFICATIONS", False)
-
-
-class TestConfig(Config):
-    SQLALCHEMY_DATABASE_URI = "sqlite:///test.db"
-    SQLALCHEMY_ECHO = False
-    TESTING = True
